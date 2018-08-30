@@ -1,0 +1,6 @@
+E:\Documentos\Curso C#\.NET-Core-WebAPI\JWM.Clinic\JWM.Comum.Entity\bin\Debug\netcoreapp2.1\JWM.Comum.Entity.deps.json
+E:\Documentos\Curso C#\.NET-Core-WebAPI\JWM.Clinic\JWM.Comum.Entity\bin\Debug\netcoreapp2.1\JWM.Comum.Entity.dll
+E:\Documentos\Curso C#\.NET-Core-WebAPI\JWM.Clinic\JWM.Comum.Entity\obj\Debug\netcoreapp2.1\JWM.Comum.Entity.csprojAssemblyReference.cache
+E:\Documentos\Curso C#\.NET-Core-WebAPI\JWM.Clinic\JWM.Comum.Entity\obj\Debug\netcoreapp2.1\JWM.Comum.Entity.csproj.CoreCompileInputs.cache
+E:\Documentos\Curso C#\.NET-Core-WebAPI\JWM.Clinic\JWM.Comum.Entity\obj\Debug\netcoreapp2.1\JWM.Comum.Entity.AssemblyInfoInputs.cache
+E:\Documentos\Curso C#\.NET-Core-WebAPI\JWM.Clinic\JWM.Comum.Entity\obj\Debug\netcoreapp2.1\JWM.Comum.Entity.AssemblyInfo.cs

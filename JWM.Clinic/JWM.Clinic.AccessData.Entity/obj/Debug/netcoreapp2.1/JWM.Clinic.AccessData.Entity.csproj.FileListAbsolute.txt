@@ -1,0 +1,14 @@
+E:\Documentos\Curso C#\.NET-Core-WebAPI\JWM.Clinic\JWM.Clinic.AccessData.Entity\bin\Debug\netcoreapp2.1\JWM.Clinic.AccessData.Entity.deps.json
+E:\Documentos\Curso C#\.NET-Core-WebAPI\JWM.Clinic\JWM.Clinic.AccessData.Entity\bin\Debug\netcoreapp2.1\JWM.Clinic.AccessData.Entity.dll
+E:\Documentos\Curso C#\.NET-Core-WebAPI\JWM.Clinic\JWM.Clinic.AccessData.Entity\obj\Debug\netcoreapp2.1\JWM.Clinic.AccessData.Entity.csproj.CoreCompileInputs.cache
+E:\Documentos\Curso C#\.NET-Core-WebAPI\JWM.Clinic\JWM.Clinic.AccessData.Entity\obj\Debug\netcoreapp2.1\JWM.Clinic.AccessData.Entity.AssemblyInfoInputs.cache
+E:\Documentos\Curso C#\.NET-Core-WebAPI\JWM.Clinic\JWM.Clinic.AccessData.Entity\obj\Debug\netcoreapp2.1\JWM.Clinic.AccessData.Entity.AssemblyInfo.cs
+E:\Documentos\Curso C#\.NET-Core-WebAPI\JWM.Clinic\JWM.Clinic.AccessData.Entity\bin\Debug\netcoreapp2.1\JWM.Clinic.Models.dll
+E:\Documentos\Curso C#\.NET-Core-WebAPI\JWM.Clinic\JWM.Clinic.AccessData.Entity\obj\Debug\netcoreapp2.1\JWM.Clinic.AccessData.Entity.csprojAssemblyReference.cache
+E:\Documentos\Curso C#\.NET-Core-WebAPI\JWM.Clinic\JWM.Clinic.AccessData.Entity\bin\Debug\netcoreapp2.1\JWM.Clinic.AccessData.Entity.runtimeconfig.json
+E:\Documentos\Curso C#\.NET-Core-WebAPI\JWM.Clinic\JWM.Clinic.AccessData.Entity\bin\Debug\netcoreapp2.1\JWM.Clinic.AccessData.Entity.runtimeconfig.dev.json
+E:\Documentos\Curso C#\.NET-Core-WebAPI\JWM.Clinic\JWM.Clinic.AccessData.Entity\bin\Debug\netcoreapp2.1\JWM.Clinic.AccessData.Entity.pdb
+E:\Documentos\Curso C#\.NET-Core-WebAPI\JWM.Clinic\JWM.Clinic.AccessData.Entity\bin\Debug\netcoreapp2.1\JWM.Clinic.Models.pdb
+E:\Documentos\Curso C#\.NET-Core-WebAPI\JWM.Clinic\JWM.Clinic.AccessData.Entity\obj\Debug\netcoreapp2.1\JWM.Clinic.AccessData.Entity.csproj.CopyComplete
+E:\Documentos\Curso C#\.NET-Core-WebAPI\JWM.Clinic\JWM.Clinic.AccessData.Entity\obj\Debug\netcoreapp2.1\JWM.Clinic.AccessData.Entity.dll
+E:\Documentos\Curso C#\.NET-Core-WebAPI\JWM.Clinic\JWM.Clinic.AccessData.Entity\obj\Debug\netcoreapp2.1\JWM.Clinic.AccessData.Entity.pdb

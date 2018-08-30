@@ -1,0 +1,9 @@
+E:\Documentos\Curso C#\.NET-Core-WebAPI\JWM.Clinic\JWM.Clinic.Models\bin\Debug\netcoreapp2.1\JWM.Clinic.Models.deps.json
+E:\Documentos\Curso C#\.NET-Core-WebAPI\JWM.Clinic\JWM.Clinic.Models\bin\Debug\netcoreapp2.1\JWM.Clinic.Models.dll
+E:\Documentos\Curso C#\.NET-Core-WebAPI\JWM.Clinic\JWM.Clinic.Models\bin\Debug\netcoreapp2.1\JWM.Clinic.Models.pdb
+E:\Documentos\Curso C#\.NET-Core-WebAPI\JWM.Clinic\JWM.Clinic.Models\obj\Debug\netcoreapp2.1\JWM.Clinic.Models.csprojAssemblyReference.cache
+E:\Documentos\Curso C#\.NET-Core-WebAPI\JWM.Clinic\JWM.Clinic.Models\obj\Debug\netcoreapp2.1\JWM.Clinic.Models.csproj.CoreCompileInputs.cache
+E:\Documentos\Curso C#\.NET-Core-WebAPI\JWM.Clinic\JWM.Clinic.Models\obj\Debug\netcoreapp2.1\JWM.Clinic.Models.AssemblyInfoInputs.cache
+E:\Documentos\Curso C#\.NET-Core-WebAPI\JWM.Clinic\JWM.Clinic.Models\obj\Debug\netcoreapp2.1\JWM.Clinic.Models.AssemblyInfo.cs
+E:\Documentos\Curso C#\.NET-Core-WebAPI\JWM.Clinic\JWM.Clinic.Models\obj\Debug\netcoreapp2.1\JWM.Clinic.Models.dll
+E:\Documentos\Curso C#\.NET-Core-WebAPI\JWM.Clinic\JWM.Clinic.Models\obj\Debug\netcoreapp2.1\JWM.Clinic.Models.pdb
