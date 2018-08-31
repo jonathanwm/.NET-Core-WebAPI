@@ -2,6 +2,31 @@
   "version": 3,
   "targets": {
     ".NETCoreApp,Version=v2.1": {
+      "AutoMapper/7.0.1": {
+        "type": "package",
+        "dependencies": {
+          "System.ValueTuple": "4.5.0"
+        },
+        "compile": {
+          "lib/netcoreapp2.0/AutoMapper.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp2.0/AutoMapper.dll": {}
+        }
+      },
+      "AutoMapper.Extensions.Microsoft.DependencyInjection/5.0.1": {
+        "type": "package",
+        "dependencies": {
+          "AutoMapper": "7.0.1",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "2.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/AutoMapper.Extensions.Microsoft.DependencyInjection.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/AutoMapper.Extensions.Microsoft.DependencyInjection.dll": {}
+        }
+      },
       "Microsoft.AspNet.WebApi.Client/5.2.6": {
         "type": "package",
         "dependencies": {
@@ -4667,10 +4692,83 @@
         "runtime": {
           "bin/placeholder/JWM.Clinic.Models.dll": {}
         }
+      },
+      "JWM.Clinic.Repository.Entity/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.1",
+        "dependencies": {
+          "JWM.Repositories.Comum.Entity": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/JWM.Clinic.Repository.Entity.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/JWM.Clinic.Repository.Entity.dll": {}
+        }
+      },
+      "JWM.Repositories.Comum/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.1",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "2.1.2"
+        },
+        "compile": {
+          "bin/placeholder/JWM.Repositories.Comum.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/JWM.Repositories.Comum.dll": {}
+        }
+      },
+      "JWM.Repositories.Comum.Entity/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.1",
+        "dependencies": {
+          "JWM.Clinic.AccessData.Entity": "1.0.0",
+          "JWM.Repositories.Comum": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "2.1.2"
+        },
+        "compile": {
+          "bin/placeholder/JWM.Repositories.Comum.Entity.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/JWM.Repositories.Comum.Entity.dll": {}
+        }
       }
     }
   },
   "libraries": {
+    "AutoMapper/7.0.1": {
+      "sha512": "6xHbhsW09sWjjYuE1sqhYn25PQzB6UEUVPME5uhlaIz2NR2+L3+FGbVxvknJKug1BLp6VTLxDb5RcGXKMm0ieQ==",
+      "type": "package",
+      "path": "automapper/7.0.1",
+      "files": [
+        "automapper.7.0.1.nupkg.sha512",
+        "automapper.nuspec",
+        "lib/net45/AutoMapper.dll",
+        "lib/net45/AutoMapper.pdb",
+        "lib/net45/AutoMapper.xml",
+        "lib/netcoreapp2.0/AutoMapper.dll",
+        "lib/netcoreapp2.0/AutoMapper.pdb",
+        "lib/netcoreapp2.0/AutoMapper.xml",
+        "lib/netstandard1.3/AutoMapper.dll",
+        "lib/netstandard1.3/AutoMapper.pdb",
+        "lib/netstandard1.3/AutoMapper.xml",
+        "lib/netstandard2.0/AutoMapper.dll",
+        "lib/netstandard2.0/AutoMapper.pdb",
+        "lib/netstandard2.0/AutoMapper.xml"
+      ]
+    },
+    "AutoMapper.Extensions.Microsoft.DependencyInjection/5.0.1": {
+      "sha512": "7MIq6D/ax3964iHXbL1L2ldUvl6IlKp0p1GZFzr6vlIhEVyp4CgJwOpisRLvIO7dP+kDtbY3Hb9yuPNCkfyBFg==",
+      "type": "package",
+      "path": "automapper.extensions.microsoft.dependencyinjection/5.0.1",
+      "files": [
+        "automapper.extensions.microsoft.dependencyinjection.5.0.1.nupkg.sha512",
+        "automapper.extensions.microsoft.dependencyinjection.nuspec",
+        "lib/netstandard2.0/AutoMapper.Extensions.Microsoft.DependencyInjection.dll",
+        "lib/netstandard2.0/AutoMapper.Extensions.Microsoft.DependencyInjection.pdb"
+      ]
+    },
     "Microsoft.AspNet.WebApi.Client/5.2.6": {
       "sha512": "rMDlyePoxggkmN/qgha1+BR2Uy+dOr38xKCQOPfVNKGY07R2nYJGMTKJFE1XFgwD70RYUNazf2fqutjJF18XgQ==",
       "type": "package",
@@ -12327,11 +12425,29 @@
       "type": "project",
       "path": "../JWM.Clinic.Models/JWM.Clinic.Models.csproj",
       "msbuildProject": "../JWM.Clinic.Models/JWM.Clinic.Models.csproj"
+    },
+    "JWM.Clinic.Repository.Entity/1.0.0": {
+      "type": "project",
+      "path": "../JWM.Clinic.Repository.Entity/JWM.Clinic.Repository.Entity.csproj",
+      "msbuildProject": "../JWM.Clinic.Repository.Entity/JWM.Clinic.Repository.Entity.csproj"
+    },
+    "JWM.Repositories.Comum/1.0.0": {
+      "type": "project",
+      "path": "../JWM.Repositories.Comum/JWM.Repositories.Comum.csproj",
+      "msbuildProject": "../JWM.Repositories.Comum/JWM.Repositories.Comum.csproj"
+    },
+    "JWM.Repositories.Comum.Entity/1.0.0": {
+      "type": "project",
+      "path": "../JWM.Repositories.Comum.Entity/JWM.Repositories.Comum.Entity.csproj",
+      "msbuildProject": "../JWM.Repositories.Comum.Entity/JWM.Repositories.Comum.Entity.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.1": [
+      "AutoMapper >= 7.0.1",
+      "AutoMapper.Extensions.Microsoft.DependencyInjection >= 5.0.1",
       "JWM.Clinic.AccessData.Entity >= 1.0.0",
+      "JWM.Clinic.Repository.Entity >= 1.0.0",
       "Microsoft.AspNetCore.App >= 2.1.1",
       "Microsoft.NETCore.App >= 2.1.0",
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 2.1.1"
@@ -12369,6 +12485,9 @@
           "projectReferences": {
             "E:\\Documentos\\Curso C#\\.NET-Core-WebAPI\\JWM.Clinic\\JWM.Clinic.AccessData.Entity\\JWM.Clinic.AccessData.Entity.csproj": {
               "projectPath": "E:\\Documentos\\Curso C#\\.NET-Core-WebAPI\\JWM.Clinic\\JWM.Clinic.AccessData.Entity\\JWM.Clinic.AccessData.Entity.csproj"
+            },
+            "E:\\Documentos\\Curso C#\\.NET-Core-WebAPI\\JWM.Clinic\\JWM.Clinic.Repository.Entity\\JWM.Clinic.Repository.Entity.csproj": {
+              "projectPath": "E:\\Documentos\\Curso C#\\.NET-Core-WebAPI\\JWM.Clinic\\JWM.Clinic.Repository.Entity\\JWM.Clinic.Repository.Entity.csproj"
             }
           }
         }
@@ -12382,6 +12501,14 @@
     "frameworks": {
       "netcoreapp2.1": {
         "dependencies": {
+          "AutoMapper": {
+            "target": "Package",
+            "version": "[7.0.1, )"
+          },
+          "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+            "target": "Package",
+            "version": "[5.0.1, )"
+          },
           "Microsoft.AspNetCore.App": {
             "suppressParent": "All",
             "target": "Package",

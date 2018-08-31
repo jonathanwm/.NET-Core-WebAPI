@@ -13,6 +13,11 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
+using AutoMapper;
+using JWM.Repositories.Comum;
+using JWM.Clinic.Repository.Entity;
+using JWM.Repositories.Comum.Entity;
+using JWM.Clinic.Models;
 
 namespace JWM.Clinic
 {
@@ -28,12 +33,19 @@ namespace JWM.Clinic
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddAutoMapper();
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 
             var connectionString = Configuration["ConnectionStrings:BancoDB"];
             services.AddDbContext<Contexto>(
                 opts => opts.UseNpgsql(connectionString)
             );
+
+            services.AddScoped<IRepositoryGeneric<Animal, long>, AnimalRepository>();
+            services.AddScoped<IRepositoryGeneric<Veterinary, long>, VeterinaryRepository>();
+            services.AddScoped<IRepositoryGeneric<Handbook, long>, HandbookRepository>();
+
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
