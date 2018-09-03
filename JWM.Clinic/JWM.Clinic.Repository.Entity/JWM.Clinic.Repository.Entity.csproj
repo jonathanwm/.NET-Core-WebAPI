@@ -4,4 +4,8 @@
     <TargetFramework>netcoreapp2.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\JWM.Repositories.Comum.Entity\JWM.Repositories.Comum.Entity.csproj" />
+  </ItemGroup>
+
 </Project>

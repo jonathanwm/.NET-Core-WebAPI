@@ -4,4 +4,10 @@
     <TargetFramework>netcoreapp2.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\JWM.Clinic.Models\JWM.Clinic.Models.csproj" />
+    <ProjectReference Include="..\JWM.Repositories.Comum\JWM.Repositories.Comum.csproj" />
+    <ProjectReference Include="..\JWM.Services.Comum\JWM.Services.Comum.csproj" />
+  </ItemGroup>
+
 </Project>

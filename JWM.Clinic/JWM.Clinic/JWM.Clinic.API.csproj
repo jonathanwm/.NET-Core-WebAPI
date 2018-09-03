@@ -17,6 +17,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\JWM.Clinic.AccessData.Entity\JWM.Clinic.AccessData.Entity.csproj" />
+    <ProjectReference Include="..\JWM.Clinic.Repository.Entity\JWM.Clinic.Repository.Entity.csproj" />
   </ItemGroup>
 
 </Project>
