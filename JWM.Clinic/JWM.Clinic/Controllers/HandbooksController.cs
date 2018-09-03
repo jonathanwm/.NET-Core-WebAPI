@@ -7,6 +7,9 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using JWM.Clinic.AccessData.Entity.Context;
 using JWM.Clinic.Models;
+using AutoMapper;
+using JWM.Services.Comum;
+using JWM.Clinic.API.ViewModels;
 
 namespace JWM.Clinic.API.Controllers
 {
@@ -14,30 +17,42 @@ namespace JWM.Clinic.API.Controllers
     [ApiController]
     public class HandbooksController : ControllerBase
     {
-        private readonly Contexto _context;
+        //private readonly Contexto _context;
+        private readonly IMapper _mapper;
+        private readonly IServiceHandbook _serviceHandbook;
 
-        public HandbooksController(Contexto context)
+        public HandbooksController(IMapper mapper, IServiceHandbook serviceHandbook)
         {
-            _context = context;
+            _mapper = mapper;
+            _serviceHandbook = serviceHandbook;
         }
 
         // GET: api/Handbooks
         [HttpGet]
-        public IEnumerable<Handbook> GetHandbooks()
+        public IEnumerable<HandbookExibicaoViewModel> GetHandbooks()
         {
-            return _context.Handbooks;
+
+            //_mapper.Map<TypeIWantToMapTo>(originalObject);
+            var prontuarios = _serviceHandbook.Selection();
+            var teste = _mapper.Map<List<HandbookExibicaoViewModel>>(prontuarios);
+            return _mapper.Map<List<HandbookExibicaoViewModel>>(_serviceHandbook.Selection());
+                
         }
 
         // GET: api/Handbooks/5
         [HttpGet("{id}")]
-        public async Task<IActionResult> GetHandbook([FromRoute] long id)
+        public IActionResult GetHandbook([FromRoute] long id)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
-            var handbook = await _context.Handbooks.FindAsync(id);
+            //var handbook = await _context.Handbooks.FindAsync(id);
+            var prontuario = _serviceHandbook.SelectionToId(id);
+            var teste = _mapper.Map<HandbookExibicaoViewModel>(prontuario);
+            var handbook = _mapper.Map<HandbookExibicaoViewModel>(_serviceHandbook.SelectionToId(id));
+
 
             if (handbook == null)
             {
@@ -49,78 +64,95 @@ namespace JWM.Clinic.API.Controllers
 
         // PUT: api/Handbooks/5
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutHandbook([FromRoute] long id, [FromBody] Handbook handbook)
+        public IActionResult PutHandbook([FromRoute] long id, [FromBody] HandbookViewModel viewModel)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
-            if (id != handbook.Id)
+            if (id != viewModel.Id)
             {
                 return BadRequest();
             }
 
-            _context.Entry(handbook).State = EntityState.Modified;
+            TimeSpan hour = TimeSpan.Parse(viewModel.Hour);
+            Handbook handbook = Mapper.Map<Handbook>(viewModel);
+            handbook.Date = handbook.Date.Add(hour);
+            _serviceHandbook.Change(handbook);
+            //TimeSpan hora = TimeSpan.Parse(viewModel.Hora);
+            //Prontuario prontuario = Mapper.Map<ProntuarioViewModel, Prontuario>(viewModel);
+            //prontuario.Data = prontuario.Data.Add(hora);
+            //repositorioProntuarios.Alterar(prontuario);
+            //.Entry(handbook).State = EntityState.Modified;
 
-            try
-            {
-                await _context.SaveChangesAsync();
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!HandbookExists(id))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
-            }
+            //try
+            //{
+            //    await _context.SaveChangesAsync();
+            //}
+            //catch (DbUpdateConcurrencyException)
+            //{
+            //    if (!HandbookExists(id))
+            //    {
+            //        return NotFound();
+            //    }
+            //    else
+            //    {
+            //        throw;
+            //    }
+            //}
 
             return NoContent();
         }
 
         // POST: api/Handbooks
         [HttpPost]
-        public async Task<IActionResult> PostHandbook([FromBody] Handbook handbook)
+        public IActionResult PostHandbook([FromBody] HandbookViewModel viewModel)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
+            
+            TimeSpan hour = TimeSpan.Parse(viewModel.Hour);
+            Handbook handbook = _mapper.Map<Handbook>(viewModel);
+            handbook.Date = handbook.Date.Add(hour);
+            _serviceHandbook.Insert(handbook);
+            //_context.Handbooks.Add(handbook);
+            //await _context.SaveChangesAsync();
 
-            _context.Handbooks.Add(handbook);
-            await _context.SaveChangesAsync();
-
-            return CreatedAtAction("GetHandbook", new { id = handbook.Id }, handbook);
+            return CreatedAtAction("GetHandbook", new { id = viewModel.Id }, viewModel);
         }
 
         // DELETE: api/Handbooks/5
         [HttpDelete("{id}")]
-        public async Task<IActionResult> DeleteHandbook([FromRoute] long id)
+        public IActionResult DeleteHandbook([FromRoute] long id)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
-            var handbook = await _context.Handbooks.FindAsync(id);
+            var handbook = _serviceHandbook.SelectionToId(id);
             if (handbook == null)
             {
                 return NotFound();
             }
 
-            _context.Handbooks.Remove(handbook);
-            await _context.SaveChangesAsync();
+            _serviceHandbook.Delete(handbook);
+            //_context.Handbooks.Remove(handbook);
+            //await _context.SaveChangesAsync();
 
             return Ok(handbook);
         }
 
-        private bool HandbookExists(long id)
+        [Route("HandbookExists/{id}")]
+        [HttpGet]
+        public IActionResult HandbookExists([FromRoute] long id)
         {
-            return _context.Handbooks.Any(e => e.Id == id);
+            //return _context.Animals.Any(e => e.Id == id);
+            bool exists = _serviceHandbook.Exists(id);
+            return Ok(exists);
         }
     }
 }

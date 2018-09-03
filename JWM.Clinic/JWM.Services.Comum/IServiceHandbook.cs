@@ -7,5 +7,6 @@ namespace JWM.Services.Comum
 {
     public interface IServiceHandbook : IServiceGeneric<Handbook, long>
     {
+        bool Exists(long id);
     }
 }

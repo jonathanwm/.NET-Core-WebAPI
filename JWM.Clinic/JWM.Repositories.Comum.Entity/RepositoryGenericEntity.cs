@@ -50,9 +50,13 @@ namespace JWM.Repositories.Comum.Entity
             return _contexto.Set<TEntity>().ToList();
         }
 
-        public TEntity SelectionToId(TKey id)
+        public virtual TEntity SelectionToId(TKey id)
         {
             return _contexto.Set<TEntity>().Find(id);
         }
+
+        
+
+
     }
 }

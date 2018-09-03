@@ -1,0 +1,16 @@
+E:\Documentos\Curso C#\.NET-Core-WebAPI\JWM.Clinic\JWM.Services\bin\Debug\netcoreapp2.1\JWM.Services.deps.json
+E:\Documentos\Curso C#\.NET-Core-WebAPI\JWM.Clinic\JWM.Services\bin\Debug\netcoreapp2.1\JWM.Services.dll
+E:\Documentos\Curso C#\.NET-Core-WebAPI\JWM.Clinic\JWM.Services\bin\Debug\netcoreapp2.1\JWM.Services.pdb
+E:\Documentos\Curso C#\.NET-Core-WebAPI\JWM.Clinic\JWM.Services\bin\Debug\netcoreapp2.1\JWM.Clinic.Models.dll
+E:\Documentos\Curso C#\.NET-Core-WebAPI\JWM.Clinic\JWM.Services\bin\Debug\netcoreapp2.1\JWM.Repositories.Comum.dll
+E:\Documentos\Curso C#\.NET-Core-WebAPI\JWM.Clinic\JWM.Services\bin\Debug\netcoreapp2.1\JWM.Services.Comum.dll
+E:\Documentos\Curso C#\.NET-Core-WebAPI\JWM.Clinic\JWM.Services\bin\Debug\netcoreapp2.1\JWM.Clinic.Models.pdb
+E:\Documentos\Curso C#\.NET-Core-WebAPI\JWM.Clinic\JWM.Services\bin\Debug\netcoreapp2.1\JWM.Repositories.Comum.pdb
+E:\Documentos\Curso C#\.NET-Core-WebAPI\JWM.Clinic\JWM.Services\bin\Debug\netcoreapp2.1\JWM.Services.Comum.pdb
+E:\Documentos\Curso C#\.NET-Core-WebAPI\JWM.Clinic\JWM.Services\obj\Debug\netcoreapp2.1\JWM.Services.csprojAssemblyReference.cache
+E:\Documentos\Curso C#\.NET-Core-WebAPI\JWM.Clinic\JWM.Services\obj\Debug\netcoreapp2.1\JWM.Services.csproj.CoreCompileInputs.cache
+E:\Documentos\Curso C#\.NET-Core-WebAPI\JWM.Clinic\JWM.Services\obj\Debug\netcoreapp2.1\JWM.Services.AssemblyInfoInputs.cache
+E:\Documentos\Curso C#\.NET-Core-WebAPI\JWM.Clinic\JWM.Services\obj\Debug\netcoreapp2.1\JWM.Services.AssemblyInfo.cs
+E:\Documentos\Curso C#\.NET-Core-WebAPI\JWM.Clinic\JWM.Services\obj\Debug\netcoreapp2.1\JWM.Services.csproj.CopyComplete
+E:\Documentos\Curso C#\.NET-Core-WebAPI\JWM.Clinic\JWM.Services\obj\Debug\netcoreapp2.1\JWM.Services.dll
+E:\Documentos\Curso C#\.NET-Core-WebAPI\JWM.Clinic\JWM.Services\obj\Debug\netcoreapp2.1\JWM.Services.pdb

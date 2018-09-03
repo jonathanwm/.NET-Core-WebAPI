@@ -18,6 +18,8 @@ using JWM.Repositories.Comum;
 using JWM.Clinic.Repository.Entity;
 using JWM.Repositories.Comum.Entity;
 using JWM.Clinic.Models;
+using JWM.Services.Comum;
+using JWM.Services;
 
 namespace JWM.Clinic
 {
@@ -41,9 +43,14 @@ namespace JWM.Clinic
                 opts => opts.UseNpgsql(connectionString)
             );
 
-            services.AddScoped<IRepositoryGeneric<Animal, long>, AnimalRepository>();
-            services.AddScoped<IRepositoryGeneric<Veterinary, long>, VeterinaryRepository>();
-            services.AddScoped<IRepositoryGeneric<Handbook, long>, HandbookRepository>();
+            
+            services.AddScoped<IRepositoryAnimal, RepositoryAnimal>();
+            services.AddScoped<IRepositoryVeterinary, RepositoryVeterinary>();
+            services.AddScoped<IRepositoryHandbook, RepositoryHandbook>();
+            services.AddScoped<IServiceAnimal, ServiceAnimal>();
+            services.AddScoped<IServiceVeterinary, ServiceVeterinary>();
+            services.AddScoped<IServiceHandbook, ServiceHandbook>();
+            
 
 
         }

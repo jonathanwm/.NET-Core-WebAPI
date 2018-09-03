@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v2.1",
+    "signature": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v2.1": {
+      "JWM.Services.Comum/1.0.0": {
+        "dependencies": {
+          "JWM.Clinic.Models": "1.0.0"
+        },
+        "runtime": {
+          "JWM.Services.Comum.dll": {}
+        }
+      },
+      "JWM.Clinic.Models/1.0.0": {
+        "runtime": {
+          "JWM.Clinic.Models.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "JWM.Services.Comum/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "JWM.Clinic.Models/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

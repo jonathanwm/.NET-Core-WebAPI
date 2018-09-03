@@ -10,12 +10,17 @@ namespace JWM.Services
     public class ServiceVeterinary : ServiceBase<Veterinary, long>, IServiceVeterinary
     {
 
-        private readonly IRepositoryGeneric<Veterinary, long> _repositoriesVeterinaries;
+        private readonly IRepositoryVeterinary _repositoryVeterinaries;
 
-        public ServiceVeterinary(IRepositoryGeneric<Veterinary, long> repositoriesVeterinaries)
-            : base(repositoriesVeterinaries)
+        public ServiceVeterinary(IRepositoryVeterinary repositoryVeterinaries)
+            : base(repositoryVeterinaries)
         {
-            _repositoriesVeterinaries = repositoriesVeterinaries;
+            _repositoryVeterinaries = repositoryVeterinaries;
+        }
+
+        public bool Exists(long id)
+        {
+            return _repositoryVeterinaries.Exists(id);
         }
     }
 }

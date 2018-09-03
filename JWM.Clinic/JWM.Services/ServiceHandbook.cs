@@ -10,12 +10,17 @@ namespace JWM.Services
     public class ServiceHandbook : ServiceBase<Handbook, long>, IServiceHandbook
     {
 
-        private readonly IRepositoryGeneric<Handbook, long> _repositoriesHandbooks;
+        private readonly IRepositoryHandbook _repositoryHandbooks;
 
-        public ServiceHandbook(IRepositoryGeneric<Handbook, long> repositoriesHandbooks)
-            : base(repositoriesHandbooks)
+        public ServiceHandbook(IRepositoryHandbook repositoryHandbooks)
+            : base(repositoryHandbooks)
         {
-            _repositoriesHandbooks = repositoriesHandbooks;
+            _repositoryHandbooks = repositoryHandbooks;
+        }
+
+        public bool Exists(long id)
+        {
+            return _repositoryHandbooks.Exists(id);
         }
     }
 }

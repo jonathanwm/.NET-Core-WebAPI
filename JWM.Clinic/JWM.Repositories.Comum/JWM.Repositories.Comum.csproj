@@ -8,4 +8,8 @@
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="2.1.2" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\JWM.Clinic.Models\JWM.Clinic.Models.csproj" />
+  </ItemGroup>
+
 </Project>

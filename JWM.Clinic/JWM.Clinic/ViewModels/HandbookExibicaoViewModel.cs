@@ -12,8 +12,8 @@ namespace JWM.Clinic.API.ViewModels
         public DateTime Date { get; set; }
         public string Hour { get; set; }
         public string Observation { get; set; }
-        public long NameVeterinary { get; set; }
-        public long NameAnimal { get; set; }
+        public string NameVeterinary { get; set; }
+        public string NameAnimal { get; set; }
         
     }
 }

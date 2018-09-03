@@ -17,3 +17,13 @@ E:\Documentos\Curso C#\.NET-Core-WebAPI\JWM.Clinic\JWM.Clinic\bin\Debug\netcorea
 E:\Documentos\Curso C#\.NET-Core-WebAPI\JWM.Clinic\JWM.Clinic\bin\Debug\netcoreapp2.1\JWM.Clinic.AccessData.Entity.pdb
 E:\Documentos\Curso C#\.NET-Core-WebAPI\JWM.Clinic\JWM.Clinic\bin\Debug\netcoreapp2.1\JWM.Clinic.Models.pdb
 E:\Documentos\Curso C#\.NET-Core-WebAPI\JWM.Clinic\JWM.Clinic\obj\Debug\netcoreapp2.1\JWM.Clinic.API.csproj.CopyComplete
+E:\Documentos\Curso C#\.NET-Core-WebAPI\JWM.Clinic\JWM.Clinic\bin\Debug\netcoreapp2.1\JWM.Clinic.Repository.Entity.dll
+E:\Documentos\Curso C#\.NET-Core-WebAPI\JWM.Clinic\JWM.Clinic\bin\Debug\netcoreapp2.1\JWM.Repositories.Comum.dll
+E:\Documentos\Curso C#\.NET-Core-WebAPI\JWM.Clinic\JWM.Clinic\bin\Debug\netcoreapp2.1\JWM.Repositories.Comum.Entity.dll
+E:\Documentos\Curso C#\.NET-Core-WebAPI\JWM.Clinic\JWM.Clinic\bin\Debug\netcoreapp2.1\JWM.Services.Comum.dll
+E:\Documentos\Curso C#\.NET-Core-WebAPI\JWM.Clinic\JWM.Clinic\bin\Debug\netcoreapp2.1\JWM.Services.dll
+E:\Documentos\Curso C#\.NET-Core-WebAPI\JWM.Clinic\JWM.Clinic\bin\Debug\netcoreapp2.1\JWM.Clinic.Repository.Entity.pdb
+E:\Documentos\Curso C#\.NET-Core-WebAPI\JWM.Clinic\JWM.Clinic\bin\Debug\netcoreapp2.1\JWM.Services.Comum.pdb
+E:\Documentos\Curso C#\.NET-Core-WebAPI\JWM.Clinic\JWM.Clinic\bin\Debug\netcoreapp2.1\JWM.Services.pdb
+E:\Documentos\Curso C#\.NET-Core-WebAPI\JWM.Clinic\JWM.Clinic\bin\Debug\netcoreapp2.1\JWM.Repositories.Comum.pdb
+E:\Documentos\Curso C#\.NET-Core-WebAPI\JWM.Clinic\JWM.Clinic\bin\Debug\netcoreapp2.1\JWM.Repositories.Comum.Entity.pdb

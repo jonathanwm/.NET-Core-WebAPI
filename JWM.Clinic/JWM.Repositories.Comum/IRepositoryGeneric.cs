@@ -14,6 +14,7 @@ namespace JWM.Repositories.Comum
         void Change(TEntity entity);
         void Delete(TEntity entity);
         void DeleteToId(TKey id);
+        
 
     }
 }

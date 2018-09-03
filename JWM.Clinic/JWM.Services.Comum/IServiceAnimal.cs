@@ -8,5 +8,7 @@ namespace JWM.Services.Comum
     public interface IServiceAnimal : IServiceGeneric<Animal, long>
     {
 
+        bool Exists(long id);
+
     }
 }

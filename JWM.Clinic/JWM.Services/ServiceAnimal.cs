@@ -10,13 +10,18 @@ namespace JWM.Services
     public class ServiceAnimal : ServiceBase<Animal, long>, IServiceAnimal
     {
 
-        private readonly IRepositoryGeneric<Animal, long> _repositoriesAnimals;
+        private readonly IRepositoryAnimal _repositoryAnimals;
 
-        public ServiceAnimal(IRepositoryGeneric<Animal, long> repositoriesAnimals)
-            : base(repositoriesAnimals)
+        public ServiceAnimal(IRepositoryAnimal repositoryAnimals)
+            : base(repositoryAnimals)
         {
-            _repositoriesAnimals = repositoriesAnimals;
+            _repositoryAnimals = repositoryAnimals;
 
+        }
+
+        public bool Exists(long id)
+        {
+            return _repositoryAnimals.Exists(id);
         }
     }
 }

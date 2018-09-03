@@ -740,6 +740,16 @@
         "compile": {
           "ref/netstandard1.3/System.Threading.Tasks.dll": {}
         }
+      },
+      "JWM.Clinic.Models/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.1",
+        "compile": {
+          "bin/placeholder/JWM.Clinic.Models.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/JWM.Clinic.Models.dll": {}
+        }
       }
     }
   },
@@ -2907,10 +2917,16 @@
         "system.threading.tasks.4.0.11.nupkg.sha512",
         "system.threading.tasks.nuspec"
       ]
+    },
+    "JWM.Clinic.Models/1.0.0": {
+      "type": "project",
+      "path": "../JWM.Clinic.Models/JWM.Clinic.Models.csproj",
+      "msbuildProject": "../JWM.Clinic.Models/JWM.Clinic.Models.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.1": [
+      "JWM.Clinic.Models >= 1.0.0",
       "Microsoft.EntityFrameworkCore >= 2.1.2",
       "Microsoft.NETCore.App >= 2.1.0"
     ]
@@ -2944,7 +2960,11 @@
       },
       "frameworks": {
         "netcoreapp2.1": {
-          "projectReferences": {}
+          "projectReferences": {
+            "E:\\Documentos\\Curso C#\\.NET-Core-WebAPI\\JWM.Clinic\\JWM.Clinic.Models\\JWM.Clinic.Models.csproj": {
+              "projectPath": "E:\\Documentos\\Curso C#\\.NET-Core-WebAPI\\JWM.Clinic\\JWM.Clinic.Models\\JWM.Clinic.Models.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

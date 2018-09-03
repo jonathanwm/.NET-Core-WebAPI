@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.1",
-    "signature": "c44eb5b8dbfb5f74f09c9f23e21985501eef6d00"
+    "signature": "19b3d8f33ac8f5048fea18ba1c3397aa5988088c"
   },
   "compilationOptions": {
     "defines": [
@@ -25,7 +25,11 @@
       "JWM.Clinic.API/1.0.0": {
         "dependencies": {
           "AutoMapper": "7.0.1",
+          "AutoMapper.Extensions.Microsoft.DependencyInjection": "5.0.1",
           "JWM.Clinic.AccessData.Entity": "1.0.0",
+          "JWM.Clinic.Repository.Entity": "1.0.0",
+          "JWM.Services": "1.0.0",
+          "JWM.Services.Comum": "1.0.0",
           "Microsoft.AspNetCore.App": "2.1.1",
           "Microsoft.NETCore.App": "2.1.0",
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "2.1.1"
@@ -49,6 +53,21 @@
         },
         "compile": {
           "lib/netcoreapp2.0/AutoMapper.dll": {}
+        }
+      },
+      "AutoMapper.Extensions.Microsoft.DependencyInjection/5.0.1": {
+        "dependencies": {
+          "AutoMapper": "7.0.1",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "2.1.1"
+        },
+        "runtime": {
+          "lib/netstandard2.0/AutoMapper.Extensions.Microsoft.DependencyInjection.dll": {
+            "assemblyVersion": "0.0.0.0",
+            "fileVersion": "5.0.1.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/AutoMapper.Extensions.Microsoft.DependencyInjection.dll": {}
         }
       },
       "Microsoft.CodeAnalysis.CSharp.Workspaces/2.8.0": {
@@ -719,6 +738,66 @@
         },
         "compile": {
           "JWM.Clinic.Models.dll": {}
+        }
+      },
+      "JWM.Clinic.Repository.Entity/1.0.0": {
+        "dependencies": {
+          "JWM.Repositories.Comum.Entity": "1.0.0"
+        },
+        "runtime": {
+          "JWM.Clinic.Repository.Entity.dll": {}
+        },
+        "compile": {
+          "JWM.Clinic.Repository.Entity.dll": {}
+        }
+      },
+      "JWM.Repositories.Comum/1.0.0": {
+        "dependencies": {
+          "JWM.Clinic.Models": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "2.1.2"
+        },
+        "runtime": {
+          "JWM.Repositories.Comum.dll": {}
+        },
+        "compile": {
+          "JWM.Repositories.Comum.dll": {}
+        }
+      },
+      "JWM.Repositories.Comum.Entity/1.0.0": {
+        "dependencies": {
+          "JWM.Clinic.AccessData.Entity": "1.0.0",
+          "JWM.Repositories.Comum": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "2.1.2"
+        },
+        "runtime": {
+          "JWM.Repositories.Comum.Entity.dll": {}
+        },
+        "compile": {
+          "JWM.Repositories.Comum.Entity.dll": {}
+        }
+      },
+      "JWM.Services/1.0.0": {
+        "dependencies": {
+          "JWM.Clinic.Models": "1.0.0",
+          "JWM.Repositories.Comum": "1.0.0",
+          "JWM.Services.Comum": "1.0.0"
+        },
+        "runtime": {
+          "JWM.Services.dll": {}
+        },
+        "compile": {
+          "JWM.Services.dll": {}
+        }
+      },
+      "JWM.Services.Comum/1.0.0": {
+        "dependencies": {
+          "JWM.Clinic.Models": "1.0.0"
+        },
+        "runtime": {
+          "JWM.Services.Comum.dll": {}
+        },
+        "compile": {
+          "JWM.Services.Comum.dll": {}
         }
       },
       "Microsoft.AspNet.WebApi.Client/5.2.6": {
@@ -3565,6 +3644,13 @@
       "path": "automapper/7.0.1",
       "hashPath": "automapper.7.0.1.nupkg.sha512"
     },
+    "AutoMapper.Extensions.Microsoft.DependencyInjection/5.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-7MIq6D/ax3964iHXbL1L2ldUvl6IlKp0p1GZFzr6vlIhEVyp4CgJwOpisRLvIO7dP+kDtbY3Hb9yuPNCkfyBFg==",
+      "path": "automapper.extensions.microsoft.dependencyinjection/5.0.1",
+      "hashPath": "automapper.extensions.microsoft.dependencyinjection.5.0.1.nupkg.sha512"
+    },
     "Microsoft.CodeAnalysis.CSharp.Workspaces/2.8.0": {
       "type": "package",
       "serviceable": true,
@@ -3844,6 +3930,31 @@
       "sha512": ""
     },
     "JWM.Clinic.Models/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "JWM.Clinic.Repository.Entity/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "JWM.Repositories.Comum/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "JWM.Repositories.Comum.Entity/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "JWM.Services/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "JWM.Services.Comum/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

@@ -7,6 +7,8 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using JWM.Clinic.AccessData.Entity.Context;
 using JWM.Clinic.Models;
+using JWM.Services.Comum;
+using AutoMapper;
 
 namespace JWM.Clinic.API
 {
@@ -14,11 +16,13 @@ namespace JWM.Clinic.API
     [ApiController]
     public class AnimalsController : ControllerBase
     {
-        private readonly Contexto _context;
+        //private readonly Contexto _context;
+        private readonly IServiceAnimal _serviceAnimal;
 
-        public AnimalsController(Contexto context)
+        public AnimalsController(IServiceAnimal serviceAnimal)
         {
-            _context = context;
+
+            _serviceAnimal = serviceAnimal;
 
         }
 
@@ -26,19 +30,21 @@ namespace JWM.Clinic.API
         [HttpGet]
         public IEnumerable<Animal> GetAnimals()
         {
-            return _context.Animals;
+            //return _context.Animals;
+            return _serviceAnimal.Selection();
         }
 
         // GET: api/Animals/5
         [HttpGet("{id}")]
-        public async Task<IActionResult> GetAnimal([FromRoute] long id)
+        public IActionResult GetAnimal([FromRoute] long id)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
-            var animal = await _context.Animals.FindAsync(id);
+            //var animal = await _context.Animals.FindAsync(id);
+            var animal = _serviceAnimal.SelectionToId(id);
 
             if (animal == null)
             {
@@ -50,7 +56,7 @@ namespace JWM.Clinic.API
 
         // PUT: api/Animals/5
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutAnimal([FromRoute] long id, [FromBody] Animal animal)
+        public IActionResult PutAnimal([FromRoute] long id, [FromBody] Animal animal)
         {
             if (!ModelState.IsValid)
             {
@@ -62,66 +68,76 @@ namespace JWM.Clinic.API
                 return BadRequest();
             }
 
-            _context.Entry(animal).State = EntityState.Modified;
+            _serviceAnimal.Change(animal);
+            //_context.Entry(animal).State = EntityState.Modified;
 
-            try
-            {
-                await _context.SaveChangesAsync();
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!AnimalExists(id))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
-            }
+            //try
+            //{
+            //    await _context.SaveChangesAsync();
+            //}
+            //catch (DbUpdateConcurrencyException)
+            //{
+            //    if (!AnimalExists(id))
+            //    {
+            //        return NotFound();
+            //    }
+            //    else
+            //    {
+            //        throw;
+            //    }
+            //}
 
             return NoContent();
         }
 
         // POST: api/Animals
         [HttpPost]
-        public async Task<IActionResult> PostAnimal([FromBody] Animal animal)
+        public IActionResult PostAnimal([FromBody] Animal animal)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
-            _context.Animals.Add(animal);
-            await _context.SaveChangesAsync();
+            _serviceAnimal.Insert(animal);
+            //_context.Animals.Add(animal);
+            //await _context.SaveChangesAsync();
 
             return CreatedAtAction("GetAnimal", new { id = animal.Id }, animal);
         }
 
         // DELETE: api/Animals/5
         [HttpDelete("{id}")]
-        public async Task<IActionResult> DeleteAnimal([FromRoute] long id)
+        public IActionResult DeleteAnimal([FromRoute] long id)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
-            var animal = await _context.Animals.FindAsync(id);
+            //var animal = await _context.Animals.FindAsync(id);
+            var animal = _serviceAnimal.SelectionToId(id);
             if (animal == null)
             {
                 return NotFound();
             }
 
-            _context.Animals.Remove(animal);
-            await _context.SaveChangesAsync();
+            //_context.Animals.Remove(animal);
+            //await _context.SaveChangesAsync();
+            _serviceAnimal.Delete(animal);
 
             return Ok(animal);
         }
 
-        private bool AnimalExists(long id)
+        //[Route("api/[controller]/AnimalExists")]
+        //[HttpGet(Name = "AnimalExists")]
+        [Route("AnimalExists/{id}")]
+        [HttpGet]
+        public IActionResult AnimalExists([FromRoute] long id)
         {
-            return _context.Animals.Any(e => e.Id == id);
+            //return _context.Animals.Any(e => e.Id == id);
+            bool exists = _serviceAnimal.Exists(id);
+            return Ok(exists);
         }
     }
 }

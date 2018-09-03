@@ -755,6 +755,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v2.1",
         "dependencies": {
+          "JWM.Clinic.Models": "1.0.0",
           "Microsoft.EntityFrameworkCore": "2.1.2"
         },
         "compile": {

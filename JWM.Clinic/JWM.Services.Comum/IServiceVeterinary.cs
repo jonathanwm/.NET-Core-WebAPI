@@ -7,5 +7,6 @@ namespace JWM.Services.Comum
 {
     public interface IServiceVeterinary : IServiceGeneric<Veterinary, long>
     {
+        bool Exists(long id);
     }
 }

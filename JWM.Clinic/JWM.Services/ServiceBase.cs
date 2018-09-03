@@ -11,7 +11,7 @@ namespace JWM.Services
         where TEntity : class
     {
 
-        private readonly IRepositoryGeneric<TEntity, TKey> _repository;
+        protected readonly IRepositoryGeneric<TEntity, TKey> _repository;
 
         public ServiceBase(IRepositoryGeneric<TEntity, TKey> repository)
         {
